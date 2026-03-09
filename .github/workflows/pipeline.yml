@@ -1,0 +1,25 @@
+name: DevSecOps Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v3
+
+      - name: Mostrar archivos
+        run: ls -la
+
+      - name: Simular build
+        run: echo "Construyendo el proyecto..."
+
+      - name: Simular test
+        run: echo "Ejecutando pruebas..."
+
+      - name: Simular deploy
+        run: echo "Deploy realizado correctamente"
